@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"acira",
+    "password":"030920"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"acira",
+    "password":"030920"
+}
+###
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg0ZDg0NzEyNTJjYjdlZmMzYzhjMmIiLCJpYXQiOjE2MzYwOTYwOTh9.X5tPGY2VwOBi-9OJsSyyHur2Peq1xj8GuebzKLaefcA
+
+{
+    "title":"python1",
+    "description":"test",
+    "url":"google.com",
+    "status":"LEARNING"
+}
+
+###
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg0ZDg0NzEyNTJjYjdlZmMzYzhjMmIiLCJpYXQiOjE2MzYwOTYwOTh9.X5tPGY2VwOBi-9OJsSyyHur2Peq1xj8GuebzKLaefcA
+Content-Type: application/json
+
+###
+PUT http://localhost:5000/api/post/6184ede9f1fd986466c50c1b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg0ZDg0NzEyNTJjYjdlZmMzYzhjMmIiLCJpYXQiOjE2MzYwOTYwOTh9.X5tPGY2VwOBi-9OJsSyyHur2Peq1xj8GuebzKLaefcA
+
+{
+    "title":"python2",
+    "description":"test",
+    "url":"google.com",
+    "status":"LEARNING"
+}
+###
+DELETE http://localhost:5000/api/post/6184ede9f1fd986466c50c1b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg0ZDg0NzEyNTJjYjdlZmMzYzhjMmIiLCJpYXQiOjE2MzYwOTYwOTh9.X5tPGY2VwOBi-9OJsSyyHur2Peq1xj8GuebzKLaefcA
